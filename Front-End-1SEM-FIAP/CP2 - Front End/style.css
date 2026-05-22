@@ -1,0 +1,276 @@
+/* RESET BÁSICO */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* CONFIGURAÇÕES GERAIS */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+
+/* MENU */
+
+nav {
+    background-color: #1e293b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+}
+
+
+/* SEÇÕES */
+
+section {
+    background-color: white;
+
+    padding: 40px;
+
+    margin-bottom: 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* TÍTULOS */
+
+section h2 {
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+
+    color: #0f172a;
+}
+
+
+/* PARÁGRAFOS */
+
+section p {
+    margin-bottom: 15px;
+
+    font-size: 1.05rem;
+}
+
+
+/* CARDS DOS EXEMPLOS */
+
+.container-exemplos {
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+.card {
+    flex: 1;
+
+    min-width: 250px;
+
+    background-color: #f8fafc;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+
+    color: #1e293b;
+}
+
+/* FORMULÁRIO */
+
+form {
+    margin-top: 30px;
+}
+
+.campo-formulario {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 1rem;
+}
+
+
+/* BOTÃO */
+
+button {
+    background-color: #0f172a;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1e293b;
+}
+
+/* BOTÃO DARK MODE */
+
+#modo-escuro {
+    display: none;
+}
+
+.botao-dark {
+    position: fixed;
+
+    right: 20px;
+    top: 20px;
+
+    background-color: white;
+
+    color: #0f172a;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    z-index: 2000;
+
+    transition: 0.3s;
+}
+
+.botao-dark:hover {
+    transform: scale(1.05);
+}
+
+
+/* DARK MODE */
+
+#modo-escuro:checked ~ .site {
+    background-color: #0f172a;
+
+    color: white;
+}
+
+#modo-escuro:checked ~ .site section {
+    background-color: #1e293b;
+
+    color: white;
+}
+
+#modo-escuro:checked ~ .site h2,
+#modo-escuro:checked ~ .site h3 {
+    color: #38bdf8;
+}
+
+#modo-escuro:checked ~ .site .card {
+    background-color: #334155;
+}
+
+#modo-escuro:checked ~ .site table {
+    color: white;
+}
